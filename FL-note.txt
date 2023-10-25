@@ -1,0 +1,13 @@
+FedAVG 原始碼 輸出實驗結果圖 
+參考"FL with non-iid", "Advances and Open Problems in Federated Learning"設計更多non-iid的資料集
+測試fedavg的結果
+再用改kmeans算法，以multi-center測試
+最後則用peek density clustering
+
+
+problem => multi-center fedsem algo
+初始化的K是隨機生成 => 如何知道X(model parameters)的維度? 原始的Kmeans是選真實資料中的x作為中心 => 應改為選擇真正的local model weights作為中心
+隨機選擇K個中心 => K如何決定、每次分群的結果都會不同
+
+在multi-center中，會把所有(m個)的clients訓練各自的local model<paper>/select_clients = min(num_clients(default=20),len(possible_clients))<code>
+下一步:搞定cluster membership和kmeans的input dimensions
