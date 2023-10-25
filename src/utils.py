@@ -7,7 +7,6 @@ import torch
 from torchvision import datasets, transforms
 from sampling import mnist_iid, mnist_noniid, mnist_noniid_one, mnist_noniid_unequal
 from sampling import cifar_iid, cifar_noniid, cifar_noniid_one, cifar_noniid_unequal
-from myDataLoader import bmtDataset
 from collections import OrderedDict, defaultdict
 import random
 
